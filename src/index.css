@@ -1,0 +1,27 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --text-color: #1A1919;
+  --light-gray: #e7e7e7;
+  --light-blue: #15d5fb;
+  --pale-red: #D86665;
+  --ghost-color: #f7f7f7;
+
+  --soft-shadow: 0px 3px 10px 3px rgba(228, 228, 228, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
