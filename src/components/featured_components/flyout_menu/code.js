@@ -27,7 +27,7 @@ const FlyoutMenu = () => {
                         open ?
                             <FlyoutMenu
                                 open={open}
-                                setOpen={setOpen}
+                                action={() => setOpen(false)}
                                 role="menu"
                                 aria-orientation="vertical"
                             />
@@ -49,7 +49,7 @@ import { MenuContainer } from './Styled'
 const Menu = ({ content, ...props }) => {
 
     return (
-        <MenuContainer id="menu">
+        <MenuContainer id="clickable">
             <button role="menuitem">Profile</button>
             <button role="menuitem">Settings</button>
             <button role="menuitem">Logout</button>
@@ -57,7 +57,7 @@ const Menu = ({ content, ...props }) => {
     )
 }
 
-export default withClickOutside(Menu)
+export default withClickOutside(Menu)("clickable")
 `
 
 export const styled = `import styled from "styled-components"
@@ -107,13 +107,13 @@ export const MenuContainer = styled.div\`
 
 export const hoc = `import { useEffect } from "react"
 
-const withClickOutside = (WrappedComponent) => {
+const withClickOutside = (WrappedComponent) => (id) => {
 
     return (props) => {
 
         useEffect(() => {
 
-            const handleClick = (e) => e.target.id !== "menu" && props.setOpen(false)
+            const handleClick = (e) => e.target.id !== id && props.action()
 
             const timer = setTimeout(() => window.addEventListener("click", handleClick), 200 )
 
@@ -121,12 +121,10 @@ const withClickOutside = (WrappedComponent) => {
                 clearTimeout(timer)
                 window.removeEventListener("click", handleClick)
             }
-
         })
 
         return <WrappedComponent {...props} />
     }
 }
 
-export default withClickOutside
-`
+export default withClickOutside`

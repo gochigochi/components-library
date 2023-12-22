@@ -28,7 +28,7 @@ const FlyoutMenu = () => {
                         open ?
                             <Menu
                                 open={open}
-                                setOpen={setOpen}
+                                action={() => setOpen(false)}
                                 role="menu"
                                 aria-orientation="vertical"
                             />

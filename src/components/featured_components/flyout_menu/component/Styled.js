@@ -23,6 +23,10 @@ export const Icon = styled.button`
     cursor: pointer;
     display: grid;
     place-items: center;
+
+    svg {
+        stroke: var(--pale-red);
+    }
 `
 
 export const MenuContainer = styled.div`

@@ -4,7 +4,7 @@ import { MenuContainer } from './Styled'
 const Menu = ({ content, ...props }) => {
 
   return (
-    <MenuContainer id="menu">
+    <MenuContainer id="clickable">
         <button role="menuitem">Profile</button>
         <button role="menuitem">Settings</button>
         <button role="menuitem">Logout</button>
@@ -12,4 +12,4 @@ const Menu = ({ content, ...props }) => {
   )
 }
 
-export default withClickOutside(Menu)
+export default withClickOutside(Menu)("clickable")

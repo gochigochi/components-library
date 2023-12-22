@@ -12,16 +12,16 @@ const ComponentLoader = () => {
                 cx="20"
                 cy="20"
                 r="17.5"
-                pathlength="100"
-                stroke-width="5px"
+                pathLength="100"
+                strokeWidth="5px"
                 fill="none"
             />
             <Piece
                 cx="20"
                 cy="20"
                 r="17.5"
-                pathlength="100"
-                stroke-width="5px"
+                pathLength="100"
+                strokeWidth="5px"
                 fill="none"
             />
         </Svg>

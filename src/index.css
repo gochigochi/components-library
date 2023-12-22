@@ -24,4 +24,29 @@ body {
 button {
   all: unset;
   cursor: pointer;
+  user-select: none;
+}
+
+
+/* ANIMATIONS */
+.modal-enter {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transition: opacity .3s, transform .4s;
+  transform: translateY(0);
+}
+
+.modal-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: opacity .3s, transform .4s;
 }

@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 
-const withClickOutside = (WrappedComponent) => {
+const withClickOutside = (WrappedComponent) => (id) => {
 
     return (props) => {
-
+        
         useEffect(() => {
-
-            const handleClick = (e) => e.target.id !== "menu" && props.setOpen(false)
+            
+            const handleClick = (e) => e.target.id !== id && props.action()
 
             const timer = setTimeout(() => window.addEventListener("click", handleClick), 200 )
 

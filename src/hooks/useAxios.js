@@ -10,8 +10,6 @@ const useAxios = ({ url, method = "GET", body = null, headers = null }) => {
 
         const fetchData = async () => {
             try {
-
-                // axios.get(url)
                 const res = await axios[method](url)
 
                 setResponse(res)
@@ -22,7 +20,9 @@ const useAxios = ({ url, method = "GET", body = null, headers = null }) => {
                 setLoading(false)
             }
         }
-        
+
+        console.log("FETCH")
+
         fetchData()
 
     }, [url])

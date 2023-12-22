@@ -33,3 +33,25 @@ export const Component = styled.div`
     overflow-y: auto;
     position: relative;
 `
+
+export const PrimaryButton = styled.button`
+    padding: .6rem 1.6rem;
+    border-radius: 50px;
+    background-color: var(--pale-red);
+    color: #fff;
+    transition: all .2s;
+
+    &:disabled {
+        background-color: var(--text-color);
+        cursor: default;
+        opacity: .4;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &:disabled:hover {
+        opacity: .4;
+    }
+`
