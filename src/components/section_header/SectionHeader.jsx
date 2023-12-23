@@ -2,7 +2,7 @@ import { MdOutlineCategory } from "react-icons/md"
 import { ButtonBadge, ButtonsContainer, SectionHeaderContainer, SectionTitle } from '../general/GlobalStyled'
 
 const SectionHeader = ({
-    setter = () => { },
+    setter = () => {},
     state = null,
     title = "Featured Component",
     component,

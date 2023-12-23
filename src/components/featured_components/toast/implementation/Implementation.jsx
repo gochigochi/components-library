@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import { Container, Content, GhostBox, GhostTitle } from './Styled'
 import { PrimaryButton } from '../../../general/GlobalStyled'
-import Toast from '../component/Toast'
+
+const Toast = lazy(() => import('../component/Toast'))
 
 const Implementation = () => {
 
@@ -20,7 +21,9 @@ const Implementation = () => {
         </div>
         <PrimaryButton onClick={() => setOpen(true)} disabled={open} style={{"alignSelf": "end", "justifySelf": "start"}}>Add to cart</PrimaryButton>
       </Content>
-      {open ? <Toast msg="1 product added" setter={setOpen}/> : null}
+      <Suspense>
+        {open ? <Toast msg="1 product added" setter={setOpen}/> : null}
+      </Suspense>
     </Container>
   )
 }

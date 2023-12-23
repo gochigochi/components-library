@@ -1,4 +1,21 @@
-export const jsx = `//Toast.jsx
+export const jsx = `//Lazy import for implementation
+const Toast = lazy(() => import('../component/Toast'))
+
+const SampleComponent = () => {
+
+    const [open, setOpen] = useState()
+  
+    //SOME CODE...
+
+    return (
+        //SOME JSX...
+        <Suspense>
+          {open ? <Toast msg="1 product added" setter={setOpen}/> : null}
+        </Suspense>
+    )
+  }
+
+//Toast.jsx
 import { CiCircleCheck } from "react-icons/ci"
 import { IoIosCloseCircleOutline } from "react-icons/io"
 import { Box, ProgressBarContainer, ProgressBar } from "./Styled"

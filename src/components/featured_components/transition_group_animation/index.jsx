@@ -1,21 +1,16 @@
-import { useState } from "react"
-import SectionHeader from "../../section_header/SectionHeader"
 import Implementation from "./implementation/Implementation"
-import { Section, Component } from "../../general/GlobalStyled"
+import FeaturedComponent from "../FeaturedComponent"
+import { jsx, styled, hoc } from "./code"
 
 const TransitionGroupAnimationComponent = () => {
-
-    const [show, setShow] = useState("component")
-
-    return (
-        <Section>
-            <SectionHeader state="show" setter={setShow} title="Transition Group Animation" component />
-            <Component>
-                {show === "component" ? <Implementation /> : null}
-                {/* {show === "jsx" ? <CodeBlock code={jsx} /> : null} */}
-                {/* {show === "styled" ? <CodeBlock code={styled} /> : null} */}
-            </Component>
-        </Section>
+    return(
+        <FeaturedComponent 
+            title="Transition Group Animation"
+            component={<Implementation />}
+            jsx={jsx}
+            styled={styled}
+            hoc={hoc}
+        />
     )
 }
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, lazy } from 'react'
 import { ButtonsContainer, Container, GhostBox, GhostButton, Inner } from './Styled'
 import { PrimaryButton } from '../../../general/GlobalStyled'
 import Modal from '../component/Modal'
