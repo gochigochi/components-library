@@ -9,6 +9,7 @@ const SectionHeader = ({
     jsx,
     styled,
     hoc,
+    hooks,
     tailwind,
 }) => {
 
@@ -20,6 +21,7 @@ const SectionHeader = ({
                 {jsx ? <ButtonBadge onClick={() => setter("jsx")} active={state === "jsx"}>JSX</ButtonBadge> : null}
                 {styled ? <ButtonBadge onClick={() => setter("styled")} active={state === "styled"}>Styled</ButtonBadge> : null}
                 {hoc ? <ButtonBadge onClick={() => setter("hoc")} active={state === "hoc"}>HOC</ButtonBadge> : null}
+                {hooks ? <ButtonBadge onClick={() => setter("hooks")} active={state === "hoc"}>Hooks</ButtonBadge> : null}
             </ButtonsContainer>
         </SectionHeaderContainer>
     )

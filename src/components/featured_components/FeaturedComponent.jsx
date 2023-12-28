@@ -12,6 +12,7 @@ const FeaturedComponent = ({
     jsx = null,
     styled = null,
     hoc = null,
+    hooks = null,
     tailwind = null,
 }) => {
 
@@ -27,6 +28,7 @@ const FeaturedComponent = ({
                 jsx={!!jsx}
                 styled={!!styled}
                 hoc={!!hoc}
+                hooks={!!hooks}
                 tailwind={!!tailwind}
             />
             <Component>
@@ -35,6 +37,7 @@ const FeaturedComponent = ({
                     {jsx && show === "jsx" ? <CodeBlock code={jsx} /> : null}
                     {styled && show === "styled" ? <CodeBlock code={styled} /> : null}
                     {hoc && show === "hoc" ? <CodeBlock code={hoc} /> : null}
+                    {hooks && show === "hooks" ? <CodeBlock code={hooks} /> : null}
                 </Suspense>
             </Component>
         </Section>

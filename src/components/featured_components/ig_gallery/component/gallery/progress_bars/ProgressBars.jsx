@@ -12,7 +12,7 @@ const ProgressBars = ({ index, stories, currentStory, duration }) => {
           const storyIndex = stories.findIndex(stry => stry.id === story.id)
 
           return (
-            <ProgressBar wasactive={storyIndex < index.current}>
+            <ProgressBar key={story.id} wasactive={storyIndex < index.current}>
               {story.id === currentStory ? <Bar t={t} /> : null}
             </ProgressBar>
           )
