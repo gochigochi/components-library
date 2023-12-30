@@ -28,7 +28,7 @@ const InfiniteScrollGallery = () => {
                     items.length !== 0 ?
                         items.map((item, index) => {
                             return (
-                                <Img key={index} src={item.webformatURL} alt=""/>
+                                <Img key={index} src={item.webformatURL} alt="" loading="lazy"/>
                             )
                         }) : null
                 }
