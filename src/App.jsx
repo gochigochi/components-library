@@ -8,10 +8,12 @@ import InfiniteScrollGalleryCompononent from './components/featured_components/i
 import IntersectionObserverComponent from './components/featured_components/intersection_observer'
 import HandlingErrorsComponent from './components/featured_components/handling_errors'
 import ChatComponent from './components/featured_components/chat'
+import CustomScrollbarComponent from './components/featured_components/custom_scrollbar'
 
 function App() {
   return (
     <Layout>
+      <CustomScrollbarComponent />
       <ChatComponent />
       <IntersectionObserverComponent />
       <InfiniteScrollGalleryCompononent />

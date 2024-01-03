@@ -56,10 +56,6 @@ export const BubbleText = styled.p`
     white-space: pre-wrap;
 `
 
-export const Tail = styled.div`
- 
-`
-
 export const Input = styled.input`
     width: 80%;
     height: 2.3rem;
