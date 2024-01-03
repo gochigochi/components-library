@@ -1,8 +1,12 @@
-import { Layout } from "./Styled"
+import CustomScrollbarHoc from "../../hocs/custom_scrollbar/CustomScrollbarHoc"
+import { LayoutContainer } from "./Styled"
 
 const Layout = ({ children }) => {
+
+  console.log("layout")
+
   return (
-    <Layout>{children}</Layout>
+      <LayoutContainer>{children}</LayoutContainer>
   )
 }
 

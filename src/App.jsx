@@ -1,4 +1,4 @@
-import { Layout } from './components/layout/Styled'
+import Layout from "./components/layout/Layout"
 import FlyoutMenuComponent from "./components/featured_components/flyout_menu"
 import AccordionComponent from './components/featured_components/accordion'
 import InstagramGalleryComponent from './components/featured_components/ig_gallery'

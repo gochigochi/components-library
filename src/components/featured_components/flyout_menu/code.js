@@ -127,4 +127,6 @@ const withClickOutside = (WrappedComponent) => (id) => {
     }
 }
 
-export default withClickOutside`
+export default withClickOutside
+
+`

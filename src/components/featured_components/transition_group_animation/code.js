@@ -41,7 +41,17 @@ export const Container = styled.div\`
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-\``
+\`
+
+
+
+
+
+
+
+
+
+`
 
 export const hoc = `import { useEffect } from "react"
 
@@ -65,4 +75,6 @@ const withClickOutside = (WrappedComponent) => (id) => {
     }
 }
 
-export default withClickOutside`
+export default withClickOutside
+
+`
