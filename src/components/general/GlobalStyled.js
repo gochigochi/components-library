@@ -19,10 +19,17 @@ export const ButtonBadge = styled.button`
     background-color: ${({active}) => active ? "var(--pale-red)" : "var(--light-gray)"};
     border-radius: 50px;
     padding: .2rem .8rem;
+    font-weight: bold;
+
+    svg { 
+        font-size: 1.5rem;
+    }
 `
 
 export const SectionTitle = styled.h1`
     margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
 `
 
 export const Component = styled.div`
@@ -32,6 +39,8 @@ export const Component = styled.div`
     border-radius: 12px;
     overflow-y: auto;
     position: relative;
+    resize: ${({resize}) => resize && "horizontal"};
+    max-width: 100%;
 `
 
 export const PrimaryButton = styled.button`

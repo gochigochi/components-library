@@ -1,11 +1,10 @@
 import { lazy, Suspense } from "react"
 import useInView from "../../../hooks/useInView"
-import Implementation from './component/Implementation'
-import { jsx, styled } from "./code"
+import SnapLanding from "./component/SnapLanding"
 
 const FeaturedComponent = lazy(() => import('../FeaturedComponent'))
 
-const AccordionComponent = () => {
+const SnapLandingComponent = () => {
 
     const { ref, inView } = useInView({ threshold: [0.25] })
 
@@ -15,10 +14,9 @@ const AccordionComponent = () => {
                 {
                     inView ?
                         <FeaturedComponent
-                            title="Stateless Accordion"
-                            component={<Implementation />}
-                            jsx={jsx}
-                            styled={styled}
+                            title="Snap Landing"
+                            component={<SnapLanding />}
+                            resize={true}
                         /> : null
                 }
             </Suspense>
@@ -26,4 +24,4 @@ const AccordionComponent = () => {
     )
 }
 
-export default AccordionComponent
+export default SnapLandingComponent

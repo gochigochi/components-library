@@ -25,9 +25,6 @@ const SomeComponent = () => {
         }
     }
 
-    
-    console.log(response)
-
     return (
         <Card>
             <ErrorBoundary fallback={<p>An error :/</p>}>

@@ -15,7 +15,9 @@ const CustomScrollbar = () => {
             </ButtonsContainer>
             <Box>
                 <CustomScrollbarHoc>
-                    {text}
+                    <div style={{"padding": "1rem 1.5rem"}}>
+                        {text}
+                    </div>
                 </CustomScrollbarHoc>
             </Box>
         </Container>

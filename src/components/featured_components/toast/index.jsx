@@ -1,15 +1,28 @@
+import { lazy, Suspense } from "react"
+import useInView from "../../../hooks/useInView"
 import Implementation from './implementation/Implementation'
-import FeaturedComponent from '../FeaturedComponent'
 import { jsx, styled } from "./code"
 
+const FeaturedComponent = lazy(() => import('../FeaturedComponent'))
+
 const ToastComponent = () => {
+
+    const { ref, inView } = useInView({ threshold: [0.25] })
+
     return (
-        <FeaturedComponent 
-            title="Simple Toast" 
-            component={<Implementation />}
-            jsx={jsx} 
-            styled={styled} 
-        />
+        <div ref={ref}>
+            <Suspense>
+                {
+                    inView ?
+                        <FeaturedComponent
+                            title="Simple Toast"
+                            component={<Implementation />}
+                            jsx={jsx}
+                            styled={styled}
+                        /> : null
+                }
+            </Suspense>
+        </div>
     )
 }
 

@@ -1,11 +1,11 @@
 import { lazy, Suspense } from "react"
 import useInView from "../../../hooks/useInView"
-import CustomScrollbar from './component/CustomScrollbar'
-import { jsx, styled, hoc } from './code'
+import FileUploader from "./component/FileUploader"
+import { jsx, styled } from "./code"
 
 const FeaturedComponent = lazy(() => import('../FeaturedComponent'))
 
-const CustomScrollbarComponent = () => {
+const FileUploaderComponent = () => {
 
   const { ref, inView } = useInView({ threshold: [0.25] })
 
@@ -15,11 +15,10 @@ const CustomScrollbarComponent = () => {
         {
           inView ?
             <FeaturedComponent
-              title="Custom Scrollbar"
-              component={<CustomScrollbar />}
+              title="File uploader"
+              component={<FileUploader />}
               jsx={jsx}
               styled={styled}
-              hoc={hoc}
             /> : null
         }
       </Suspense>
@@ -27,4 +26,4 @@ const CustomScrollbarComponent = () => {
   )
 }
 
-export default CustomScrollbarComponent
+export default FileUploaderComponent

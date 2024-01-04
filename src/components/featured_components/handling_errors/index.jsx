@@ -1,13 +1,25 @@
-import FeaturedComponent from '../FeaturedComponent'
+import { lazy, Suspense } from "react"
+import useInView from "../../../hooks/useInView"
 import HandlingErrors from './component/HandlingErrors'
+
+const FeaturedComponent = lazy(() => import('../FeaturedComponent'))
 
 const HandlingErrorsComponent = () => {
 
+    const { ref, inView } = useInView({ threshold: [0.25] })
+
     return (
-        <FeaturedComponent
-            title="Handling Errors"
-            component={<HandlingErrors /> }
-        />
+        <div ref={ref}>
+            <Suspense>
+                {
+                    inView ?
+                        <FeaturedComponent
+                            title="Handling Errors"
+                            component={<HandlingErrors />}
+                        /> : null
+                }
+            </Suspense>
+        </div>
     )
 }
 

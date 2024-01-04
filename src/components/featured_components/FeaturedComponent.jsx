@@ -14,6 +14,7 @@ const FeaturedComponent = ({
     hoc = null,
     hooks = null,
     tailwind = null,
+    resize = false,
 }) => {
 
     const [show, setShow] = useState(init)
@@ -31,7 +32,7 @@ const FeaturedComponent = ({
                 hooks={!!hooks}
                 tailwind={!!tailwind}
             />
-            <Component>
+            <Component resize={resize}>
                 <Suspense fallback={<SectionLoader style={{"backgroundColor": "#282A36"}} />}>
                     {component && show === "component" ? component : null}
                     {jsx && show === "jsx" ? <CodeBlock code={jsx} /> : null}

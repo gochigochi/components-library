@@ -9,10 +9,20 @@ import IntersectionObserverComponent from './components/featured_components/inte
 import HandlingErrorsComponent from './components/featured_components/handling_errors'
 import ChatComponent from './components/featured_components/chat'
 import CustomScrollbarComponent from './components/featured_components/custom_scrollbar'
+import FileUploaderComponent from './components/featured_components/file_uploader'
+import NoLibrarySliderComponent from "./components/featured_components/no_library_slider"
+import MobileHorizontalScrollComponent from "./components/featured_components/mobile_horizontal_scroll"
+import SnapLandingComponent from "./components/featured_components/snap_landing"
+import Hero from "./components/hero/Hero"
 
 function App() {
   return (
     <Layout>
+      {/* <Hero /> */}
+      {/* <MobileHorizontalScrollComponent /> */}
+      <NoLibrarySliderComponent />
+      <SnapLandingComponent />
+      <FileUploaderComponent />
       <CustomScrollbarComponent />
       <ChatComponent />
       <IntersectionObserverComponent />
