@@ -1,5 +1,5 @@
 ## Components Library
 
-Libary with some components made with React, Styled Components and React Transition Group
+Library with some snippets made with React, Styled Components or Tailwind, React Transition Group and more...
 
 Visit [here](https://vite.wemix.wiz.com.ar/)
